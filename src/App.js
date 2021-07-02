@@ -18,6 +18,8 @@ import Carousel from "./Components/Carousel";
 import Register from "./Components/Pages/Register/Register";
 import Listing from "./Components/Pages/Listing/Listing";
 import ListingDetail from "./Components/Pages/Listing/ListingDetail";
+import Listings from "./Components/Pages/Listing/Listings";
+import SliderCalculator from "./Components/SliderCalculator";
 
 const fadeIn = keyframes`
 0%{
@@ -102,6 +104,7 @@ const App = () => {
             <MainImage />
             <Carousel />
             <Banner />
+            <SliderCalculator />
             <Main />
             <Form />
           </Route>
@@ -114,9 +117,12 @@ const App = () => {
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/login" component={Login}></Route>
           <Route exact path="/search" component={SearchMain}></Route>
-          <Route exact path='/listing'>
-            <MainImage />
+          <Route exact path='/listing/:address'>
             <Listing />
+          </Route>
+          <Route exact path='/listings'>
+            <MainImage />
+            <Listings />
           </Route>
           <Route exact path='/listingdetail/:id' component={ListingDetail} />
         </Switch>

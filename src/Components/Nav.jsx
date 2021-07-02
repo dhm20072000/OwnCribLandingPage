@@ -16,6 +16,7 @@ const StyledNav = styled.div`
 // box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
 // background: white;
 
+  background-color: #F9FAFC;
   position: relative;
 
   .navLinks {
@@ -131,7 +132,7 @@ const Nav = () => {
             <Link to="/sell">Services</Link>
           </li>
           <li className="navLink">
-            <Link to="/listing">Listings</Link>
+            <Link to="/listings">Listings</Link>
           </li>
         </div>
         <div className="logoContainer">
@@ -154,7 +155,7 @@ const Nav = () => {
           {
             userCtx.isLoggedIn && 
             <li className="navLink">
-              <Link to="/">Hi {userCtx.email.split('@')[0]}!</Link>
+              <Link to="/">Hi OwnCrib!</Link>
             </li>
           }
           <li className="navLink">
